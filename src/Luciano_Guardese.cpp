@@ -106,7 +106,7 @@ int main() {
 }
 
 void cargarDatos() {
-    ifstream archivoLibros("libros.csv");
+    ifstream archivoLibros("data/libros.csv");
     string linea;
     while (getline(archivoLibros, linea) && numLibros < MAX_LIBROS) {
         size_t pos = 0;
@@ -132,7 +132,7 @@ void cargarDatos() {
     }
     archivoLibros.close();
 
-    ifstream archivoUsuarios("usuarios.csv");
+    ifstream archivoUsuarios("data/usuarios.csv");
     while (getline(archivoUsuarios, linea) && numUsuarios < MAX_USUARIOS) {
         size_t pos = linea.find(",");
         usuarios[numUsuarios].nombre = linea.substr(0, pos);
@@ -147,7 +147,7 @@ void cargarDatos() {
     }
     archivoUsuarios.close();
 
-    ifstream archivoPrestamos("prestamos.csv");
+    ifstream archivoPrestamos("data/prestamos.csv");
     while (getline(archivoPrestamos, linea) && numPrestamos < MAX_PRESTAMOS) {
         size_t pos = linea.find(",");
         prestamos[numPrestamos].ISBN = linea.substr(0, pos);
@@ -172,7 +172,7 @@ void cargarDatos() {
 }
 
 void cargarReservas() {
-    ifstream archivoReservas("reservas.csv");
+    ifstream archivoReservas("data/reservas.csv");
     string linea;
     while (getline(archivoReservas, linea) && numReservas < MAX_PRESTAMOS) {
         size_t pos = linea.find(",");
@@ -194,7 +194,7 @@ void cargarReservas() {
 }
 
 void guardarDatos() {
-    ofstream archivoLibros("libros.csv");
+    ofstream archivoLibros("data/libros.csv");
     for (int i = 0; i < numLibros; i++) {
         archivoLibros << libros[i].titulo << ","
                      << libros[i].autor << ","
@@ -204,7 +204,7 @@ void guardarDatos() {
     }
     archivoLibros.close();
 
-    ofstream archivoUsuarios("usuarios.csv");
+    ofstream archivoUsuarios("data/usuarios.csv");
     for (int i = 0; i < numUsuarios; i++) {
         archivoUsuarios << usuarios[i].nombre << ","
                        << usuarios[i].contrasena << ","
@@ -212,7 +212,7 @@ void guardarDatos() {
     }
     archivoUsuarios.close();
 
-    ofstream archivoPrestamos("prestamos.csv");
+    ofstream archivoPrestamos("data/prestamos.csv");
     for (int i = 0; i < numPrestamos; i++) {
         archivoPrestamos << prestamos[i].ISBN << ","
                         << prestamos[i].usuario << ","
@@ -224,7 +224,7 @@ void guardarDatos() {
 }
 
 void guardarReservas() {
-    ofstream archivoReservas("reservas.csv");
+    ofstream archivoReservas("data/reservas.csv");
     for (int i = 0; i < numReservas; i++) {
         archivoReservas << reservas[i].ISBN << ","
                        << reservas[i].usuario << ","
