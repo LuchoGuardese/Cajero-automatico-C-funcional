@@ -4,8 +4,7 @@
 
 ![PRESENTACION](./img/cmas.jpg)
 
-**Nombre**: Luciano Facundo Guardese  
-**Fecha de entrega**: 06/03/25  
+**Nombre**: Luciano Facundo Guardese   
 
 ---
 
