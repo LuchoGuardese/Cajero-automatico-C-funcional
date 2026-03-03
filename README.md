@@ -2,7 +2,7 @@
 
 ## Simulador de Sistema de Gestión de Biblioteca
 
-![PRESENTACION](../img/cmas.jpg)
+![PRESENTACION](./img/cmas.jpg)
 
 **Nombre**: Luciano Facundo Guardese  
 **Fecha de entrega**: 06/03/25  
@@ -33,7 +33,7 @@ La gestión eficiente de una biblioteca requiere un sistema que pueda manejar m�
 
 ### 3. Diagrama de bloques
 
-![Diagrama de bloques](../img/diagrama.png)
+![Diagrama de bloques](./img/diagrama.png)
 
 La función del programa en C++ se inicia con la carga de archivos `.csv` en los arreglos para la lectura y manipulación de datos, luego continúa con la verificación del usuario a ingresar, el cual se tendrá que validar mediante un *nombre de usuario* y *contraseña*. Si el usuario no se encuentra inscripto dentro de la base de datos del programa (`usuarios.csv`), este deberá crearse uno para poder ingresar al menú principal.
 
